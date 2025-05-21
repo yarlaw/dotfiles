@@ -8,6 +8,7 @@ Using here
 - hyprland
 - kitty
 - waybar
+- wofi
 - hyprpaper
 - hyprshot
 - hypridle
