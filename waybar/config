@@ -1,0 +1,115 @@
+{
+  "layer":"top",
+	"position":"top",
+	"reload_style_on_change":true,
+
+  "height":38,
+	"margin-top":8,
+	"margin-left": 16,
+	"margin-right":16,
+
+
+  "modules-left": ["hyprland/workspaces", "custom/appname"],
+  "modules-center": ["clock"],
+  "modules-right": [
+
+    "hyprland/language",
+
+    "backlight",
+    "idle_inhibitor",
+
+    "wireplumber",
+    "custom/notification",
+
+		"network",
+		"bluetooth",
+
+		"battery",
+		"custom/power"
+  ],
+  "custom/appname": {
+    "exec": "~/.config/waybar/scripts/appname.sh",
+    "interval": 1,
+    "format": "{}",
+    "return-type": "text",
+    "tooltip": false
+  },
+  "clock": {
+		"format": "{:%A %e %B  %H:%M}"
+	},
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-up": "light -A 1",
+    "on-scroll-down": "light -U 1",
+    "tooltip":"false"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰢝",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip":"false"
+  },
+  "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip":"false"
+  },
+  "wireplumber": {
+		    "on-click": "pavucontrol",
+		    "on-click-right": "amixer sset Master toggle 1>/dev/null",
+		    "format": "<span>{icon}</span> {volume}%",
+		    "format-muted": "Soundless",
+		    "format-icons": {
+		        "headphone": " ",
+		        "hands-free": " ",
+		        "headset": " ",
+		        "phone": " ",
+		        "portable": " ",
+		        "car": " ",
+		        "default": [" ", " ", " "]
+		    },
+        "tooltip": false
+	},
+  "network": {
+        "format-wifi": "<span></span>  Wifi",
+        "format-ethernet": "<span></span>  Eth-et",
+        "format-linked": "<span></span>  Linked",
+        "format": "<span></span>  ",
+        "format-disconnected": "<span></span>  Dis-ed",
+        "interval": 60,
+        "on-click":"~/.config/rofi/rofi-wifi-menu.sh",
+        "tooltip":"false"
+  },
+  "bluetooth":{
+    	"format-on": "<span></span> On",
+    	"format-off": "<span></span> Off",
+    	"format-disabled": "<span></span>  Dis-ed",
+    	"format-connected": "<span></span> Con-ed",
+    	"format": "<span></span> Dis-ed",
+    	"on-click":"blueman-manager &",
+      "tooltip":"false"
+    },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip":"false"
+  },
+  "custom/notification":{
+    	"format": "󱅫",
+    	"on-click": "swaync-client -t -sw",
+      "tooltip":"false"
+  }
+}

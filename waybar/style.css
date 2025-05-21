@@ -1,0 +1,167 @@
+@import "macchiato.css";
+
+* {
+  font-family: Fira Code Nerd Font;
+  font-size: 0.8rem;
+  font-weight: 600;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#waybar {
+  background: @mantle;
+  color: @text;
+  border-radius: 12px;
+  border: 2px solid @surface1;
+}
+
+/* border- */
+#workspaces,
+#window,
+#clock,
+#tray,
+#network,
+#battery,
+#pulseaudio,
+#backlight,
+#language,
+#custom-power {
+  margin-top: 4px;
+  padding: 10px 6px;
+  border-radius: 0px;
+}
+
+/* border-bottom */
+#workspaces button.active,
+#custom-appname,
+#clock,
+#idle_inhibitor,
+#network,
+#battery,
+#wireplumber,
+#backlight,
+#bluetooth,
+#custom-notification,
+#language,
+#custom-power {
+  border-bottom: 2px solid @mauve;
+}
+
+#workspaces {
+  margin-left: 8px;
+  padding: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#workspaces button {
+  color: @lavender;
+  padding-bottom: 2px;
+  padding-left:4px;
+  padding-right:4px;
+}
+
+#workspaces button.active {
+  color: @teal;
+  border-radius: 0;
+  padding-bottom: 0px;
+  border-color: @teal;
+  border-width: 0;
+  border-bottom-width: 2px;
+  padding-left:4px;
+  padding-right:4px;
+}
+
+#custom-appname {
+  color: @rosewater;
+  border-color: @rosewater;
+  margin-left: 8px;
+}
+
+
+#clock {
+  border-color: @lavender;
+  color: @lavender;
+}
+
+#language {
+  color: @mauve;
+  border-color: @mauve;
+  margin-right: 16px;
+}
+
+#backlight {
+  color: @yellow;
+  border-color: @yellow;
+}
+
+#idle_inhibitor {
+  color: @peach;
+  border-color: @peach;
+  padding-left: 12px;
+  padding-right: 20px;
+  margin-right: 16px;  
+  padding-top: 2px;
+}
+
+#wireplumber {
+  color: @pink;
+  border-color: @pink;
+  padding-right: 8px;
+  padding-left: 12px;
+  padding-top: 2px;
+}
+
+#custom-notification {
+  padding-right: 16px;
+  padding-left: 12px;
+  color: @maroon;
+  border-color: @maroon;
+  margin-right: 16px;
+  padding-top: 1px;
+}
+
+#network {
+  color: @sapphire;
+  border-color: @sapphire;
+  padding-right: 16px;
+}
+
+#bluetooth {
+  color: @blue;
+  border-color: @blue;
+  padding-left: 8px;
+  padding-right: 12px;
+  margin-right: 16px;
+  padding-top: 4px;
+}
+
+#battery {
+  color: @green;
+  border-radius: 0px;
+  padding-right: 16px;
+  border-color: @green;
+}
+
+#battery.charging {
+  color: @green;
+  border-color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+  border-color: @red;
+}
+
+
+#custom-power {
+  padding-left: 12px;
+  padding-right: 22px;
+  color: @red;
+  border-color: @red;
+  border-bottom-right-radius: 12px;
+  padding-bottom: 12px;
+}
+
+
