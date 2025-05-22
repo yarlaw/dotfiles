@@ -1,12 +1,15 @@
-# Dotfiles
+## Dotfiles
 
-My dotfiles for Fedora + Hyprland
+I was bored with using Gnome for around 3 years. And here is my struggling approach to making my first rice.
+Basically, there are __Fedora__, __Hyprland__ and __Catpuccin__ theme
 
-![example](https://github.com/user-attachments/assets/163b7f18-c597-45ca-9ae5-5719bbd62c28)
+![image](https://github.com/user-attachments/assets/3fb50adf-8897-438f-aee7-9fa140a15068)
 
-Using here
-- hyprland
-- kitty
+---
+
+Using a lot of cool stuff here 😎
+- __hyprland__
+- __kitty__
 - waybar
 - wofi
 - hyprpaper
@@ -14,3 +17,8 @@ Using here
 - hypridle
 - hyprlock
 - swaync
+
+And for editors are there 🪛
+- vim
+- nvim
+- __vscodium__
