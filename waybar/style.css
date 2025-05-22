@@ -73,6 +73,14 @@
   padding-right:4px;
 }
 
+#workspaces button:hover {
+  color: @lavender;
+  background: @lavender;
+  padding-bottom: 2px;
+  padding-left:4px;
+  padding-right:4px;
+}
+
 #custom-appname {
   color: @rosewater;
   border-color: @rosewater;

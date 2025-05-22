@@ -28,7 +28,7 @@
 		"custom/power"
   ],
   "custom/appname": {
-    "exec": "~/.config/waybar/scripts/appname.sh",
+    "exec": "~/.config/scripts/appname.sh",
     "interval": 1,
     "format": "{}",
     "return-type": "text",
@@ -62,13 +62,12 @@
   "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "+idle",
+            "deactivated": "-idle"
         },
         "tooltip":"false"
   },
-  "wireplumber": {
-		    "on-click": "pavucontrol",
+  "wireplumber": {	
 		    "on-click-right": "amixer sset Master toggle 1>/dev/null",
 		    "format": "<span>{icon}</span> {volume}%",
 		    "format-muted": "Soundless",
@@ -99,7 +98,6 @@
     	"format-disabled": "<span></span>  Dis-ed",
     	"format-connected": "<span></span> Con-ed",
     	"format": "<span></span> Dis-ed",
-    	"on-click":"blueman-manager &",
       "tooltip":"false"
     },
   "custom/power": {
